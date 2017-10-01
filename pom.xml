@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.android.vending.licensing</groupId>
+	<artifactId>AudibleAndroidProductsLVL</artifactId>
+	<version>1.0.0</version>
+	<packaging>apk</packaging>
+	<name>AudibleAndroidProductsLVL</name>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+				<artifactId>maven-android-plugin</artifactId>
+				<version>2.6.1-SNAPSHOT</version>
+				<configuration>
+					<sdk>
+						<platform>8</platform>
+					</sdk>
+					<deleteConflictingFiles>true</deleteConflictingFiles>
+					<undeployBeforeDeploy>true</undeployBeforeDeploy>
+					<attachLibrary>true</attachLibrary>
+				</configuration>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.android</groupId>
+			<artifactId>android</artifactId>
+			<version>2.2.1</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+</project>
